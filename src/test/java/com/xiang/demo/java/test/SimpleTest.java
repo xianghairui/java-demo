@@ -86,5 +86,14 @@ public class SimpleTest {
 
 		return map;
 	}
+	
+	@Test
+	public void test09(){
+		double d = 1.000;
+		for(int i=0;i<10;i++) {
+			System.out.println(d+d);
+		}
+		
+	}
 
 }
