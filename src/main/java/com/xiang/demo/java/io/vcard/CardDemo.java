@@ -1,3 +1,4 @@
+/*
 package com.xiang.demo.java.io.vcard;
 
 import java.awt.Color;
@@ -10,12 +11,14 @@ import javax.imageio.ImageIO;
 
 import com.swetake.util.Qrcode;
 
+*/
 /**
  * @ClassNmae CardUtil
  * @Description 二维码图片生成的关键工具类
  * @author hairui
  * @Date 2017年3月24日 下午4:14:32
- */
+ *//*
+
 public class CardDemo {
 
 	public static void main(String[] args) throws IOException {
@@ -31,7 +34,8 @@ public class CardDemo {
 		// 填充一个矩形
 		grap.fillRect(0, 0, width, height);
 
-		/**
+		*/
+/**
 		 * 21X21 个模块 177*177个模块 每提高一个版本增加四个模块
 		 * 
 		 * 数据类型和容量 数字：7089个字符 字母：4296 8位字节的数据：2953 汉子：1817个汉子
@@ -42,7 +46,8 @@ public class CardDemo {
 		 * 
 		 * jar : qrcode.jar, zxing.jar
 		 * 
-		 */
+		 *//*
+
 		Qrcode qrcode = new Qrcode();
 		qrcode.setQrcodeEncodeMode('B');
 		// 设置纠错率
@@ -69,9 +74,12 @@ public class CardDemo {
 		// 将缓存中的图片保存到磁盘 
 		ImageIO.write(bufImg, "JPEG", directory);
 
-		/**
+		*/
+/**
 		 * vCard 电子名片
-		 */
+		 *//*
+
 	}
 
 }
+*/

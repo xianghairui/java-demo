@@ -1,3 +1,4 @@
+/*
 package com.xiang.demo.java.util.qrcode;
 
 import java.awt.BasicStroke;
@@ -14,6 +15,7 @@ import javax.imageio.ImageIO;
 
 import com.swetake.util.Qrcode;
 
+*/
 /**
  * @ClassNmae QrCardUtil
  * @Description 生成二维码图片工具类-qrcode.jar
@@ -36,40 +38,54 @@ import com.swetake.util.Qrcode;
  *              也可以选择级别L。一般情况下用户大多选择级别M(15%)。 纠错级别越高能存储的信息越少
  * @author hairui
  * @Date 2017年3月27日 下午9:50:52
- */
+ *//*
+
 public class QrCodeUtil2 {
 
-	/**
+	*/
+/**
 	 * 字符编码
-	 */
+	 *//*
+
 	private static final String CHARSET = "utf-8";
 
-	/**
+	*/
+/**
 	 * 图片类型-jpg
-	 */
+	 *//*
+
 	private static final String IMGAGE_TYPE_JPG = "JPG";
 
-	/**
+	*/
+/**
 	 * 图片类型-jpeg
-	 */
+	 *//*
+
 	private static final String IMGAGE_TYPE_JPEG = "JPEG";
 
-	/**
+	*/
+/**
 	 * 二维码尺寸
-	 */
+	 *//*
+
 	private static final int QRCODE_SIZE = 300;
 
-	/**
+	*/
+/**
 	 * LOGO宽度
-	 */
+	 *//*
+
 	private static final int LOG_WIDTH = 60;
 
-	/**
+	*/
+/**
 	 * LOGO高度
-	 */
+	 *//*
+
 	private static final int LOG_HEIGHT = 60;
 
-	/**
+	*/
+/**
 	 * 生成二维码
 	 * 
 	 * @param content
@@ -78,7 +94,8 @@ public class QrCodeUtil2 {
 	 *            存放地址
 	 * @return
 	 * @throws Exception
-	 */
+	 *//*
+
 	private static BufferedImage createImage(String content, String path) throws Exception {
 		File directory = new File("test.jpeg");
 		// 在缓存中创建一个图片对象
@@ -90,11 +107,13 @@ public class QrCodeUtil2 {
 		// 填充一个矩形
 		grap.fillRect(0, 0, QRCODE_SIZE, QRCODE_SIZE);
 
-		/**
+		*/
+/**
 		 * 
 		 * jar : qrcode.jar, zxing.jar
 		 * 
-		 */
+		 *//*
+
 		Qrcode qrcode = new Qrcode();
 		qrcode.setQrcodeEncodeMode('B');
 
@@ -126,7 +145,8 @@ public class QrCodeUtil2 {
 		return bufImg;
 	}
 
-	/**
+	*/
+/**
 	 * 插入LOGO
 	 * 
 	 * @param source
@@ -136,7 +156,8 @@ public class QrCodeUtil2 {
 	 * @param needCompress
 	 *            是否压缩
 	 * @throws Exception
-	 */
+	 *//*
+
 	private static void insertImage(BufferedImage source, String imgPath, boolean needCompress) throws Exception {
 		File file = new File(imgPath);
 		if (!file.exists()) {
@@ -171,7 +192,8 @@ public class QrCodeUtil2 {
 		graph.dispose();
 	}
 
-	/**
+	*/
+/**
 	 * 生成二维码(QRCode)图片
 	 * 
 	 * @param content
@@ -180,7 +202,8 @@ public class QrCodeUtil2 {
 	 *            生成二维码图片完整的路径
 	 * @param ccbpath
 	 *            二维码图片中间的logo路径
-	 */
+	 *//*
+
 	public static int createQRCode(String content, String imgPath, String ccbPath, int version) {
 		try {
 			Qrcode qrcodeHandler = new Qrcode();
@@ -225,9 +248,11 @@ public class QrCodeUtil2 {
 					heightLogo = logo.getHeight(null) > image.getHeight() * 2 / 10 ? (image.getHeight() * 2 / 10)
 							: logo.getWidth(null);
 
-			/**
+			*/
+/**
 			 * logo放在中心
-			 */
+			 *//*
+
 			int x = (image.getWidth() - widthLogo) / 2;
 			int y = (image.getHeight() - heightLogo) / 2;
 			gs.drawImage(logo, x, y, widthLogo, heightLogo, null);
@@ -255,3 +280,4 @@ public class QrCodeUtil2 {
 	}
 
 }
+*/
