@@ -1,5 +1,5 @@
 /*
-package com.xiang.demo.java.util.qrcode;
+package com.xiang.threadpool.java.util.qrcode;
 
 import java.awt.BasicStroke;
 import java.awt.Color;

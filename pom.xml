@@ -13,7 +13,7 @@
 
 
 	<properties>
-		<springframework.version>4.3.4.RELEASE</springframework.version>
+		<springframework.version>5.1.8.RELEASE</springframework.version>
 		<junit.version>4.12</junit.version>
 		<mysql.version>5.1.40</mysql.version>
 		<jdk.version>1.8</jdk.version>
@@ -128,6 +128,11 @@
 			<artifactId>hibernate-validator</artifactId>
 			<version>6.0.14.Final</version>
 		</dependency>
+		<dependency>
+			<groupId>org.jvnet.jaxb2.maven2</groupId>
+			<artifactId>maven-jaxb2-plugin</artifactId>
+			<version>0.14.0</version>
+		</dependency>
 
 	</dependencies>
 	
@@ -151,6 +156,32 @@
 					<password>password</password>
 					<path>/${project.artifactId}</path>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.jvnet.jaxb2.maven2</groupId>
+				<artifactId>maven-jaxb2-plugin</artifactId>
+				<version>0.14.0</version>
+				<configuration>
+					<schemaDirectory>src/main/resources/xsd</schemaDirectory>
+					<generateDirectory>src/main/java</generateDirectory>
+					<schemaIncludes>
+						<include>终端节点报文.xsd</include>
+						<include>xmldsig-core-schema.xsd</include>
+					</schemaIncludes>
+					<generatePackage>com.xiang.demo.java.domain.myxsd2</generatePackage>
+
+					<packageLevelAnnotations>false</packageLevelAnnotations>
+					<noFileHeader>true</noFileHeader>
+					<episode>false</episode>
+					<locale>cn</locale>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>

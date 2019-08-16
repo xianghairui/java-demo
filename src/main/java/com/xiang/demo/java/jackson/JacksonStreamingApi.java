@@ -26,7 +26,7 @@ public class JacksonStreamingApi {
 
 		/** write to file */
 		JsonGenerator jsonGenerator = jsonFactory
-				.createGenerator(new File("src/main/java/com/xiang/demo/java/jackson/user.json"), JsonEncoding.UTF8);
+				.createGenerator(new File("src/main/java/com/xiang/threadpool/java/jackson/user.json"), JsonEncoding.UTF8);
 
 		jsonGenerator.writeStartObject();// {
 
@@ -48,7 +48,7 @@ public class JacksonStreamingApi {
 
 		/** read from file */
 		JsonParser jsonParser = jsonFactory
-				.createParser(new File("src/main/java/com/xiang/demo/java/jackson/user.json"));
+				.createParser(new File("src/main/java/com/xiang/threadpool/java/jackson/user.json"));
 
 		// loop until token equal to "}"
 		while (jsonParser.nextToken() != JsonToken.END_OBJECT) {
