@@ -133,6 +133,11 @@
 			<artifactId>maven-jaxb2-plugin</artifactId>
 			<version>0.14.0</version>
 		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.60</version>
+		</dependency>
 
 	</dependencies>
 	
@@ -162,13 +167,13 @@
 				<artifactId>maven-jaxb2-plugin</artifactId>
 				<version>0.14.0</version>
 				<configuration>
-					<schemaDirectory>src/main/resources/xsd</schemaDirectory>
+					<schemaDirectory>src/main/resources/xsd/gzeport</schemaDirectory>
 					<generateDirectory>src/main/java</generateDirectory>
 					<schemaIncludes>
-						<include>终端节点报文.xsd</include>
+						<include>GzeportTransfer-schema.xsd</include>
 						<include>xmldsig-core-schema.xsd</include>
 					</schemaIncludes>
-					<generatePackage>com.xiang.demo.java.domain.myxsd2</generatePackage>
+					<generatePackage>com.xiang.demo.java.domain.xml.gzeport</generatePackage>
 
 					<packageLevelAnnotations>false</packageLevelAnnotations>
 					<noFileHeader>true</noFileHeader>
