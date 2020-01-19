@@ -1,10 +1,10 @@
 package com.xiang.demo.java.thread.countdownlatch;
 
+import com.google.common.util.concurrent.ThreadFactoryBuilder;
+
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.Executor;
-import java.util.concurrent.Executors;
+import java.util.concurrent.*;
 
 /**
  * @ClassNmae ApplicationStartupUtil
@@ -42,10 +42,15 @@ public class ApplicationStartupUtil {
 		_services.add(new DatabaseHealthChecker(_latch));
 		
 		//Start service checkers using executor framework
-		Executor executor = Executors.newFixedThreadPool(_services.size());
-		
+
+		// 手动创建线程池
+//		Executor executor = Executors.newFixedThreadPool(_services.size());
+		ThreadFactory namedThreadFactory = new ThreadFactoryBuilder().setNameFormat("check-external-runner-%d").build();
+		int size = _services.size();
+		ExecutorService executorService = new ThreadPoolExecutor(size,size,0L,TimeUnit.MILLISECONDS,new LinkedBlockingQueue<Runnable>(),namedThreadFactory);
+
 		for(final BaseHealthChecker v : _services) {
-			executor.execute(v);
+			executorService.execute(v);
 		}
 		
 		//Now wait till all services are checked
