@@ -167,13 +167,13 @@
 				<artifactId>maven-jaxb2-plugin</artifactId>
 				<version>0.14.0</version>
 				<configuration>
-					<schemaDirectory>src/main/resources/xsd/gzeport</schemaDirectory>
+					<schemaDirectory>src/main/resources/xsd</schemaDirectory>
 					<generateDirectory>src/main/java</generateDirectory>
 					<schemaIncludes>
-						<include>GzeportTransfer-schema.xsd</include>
+						<include>进口业务节点报文.xsd</include>
 						<include>xmldsig-core-schema.xsd</include>
 					</schemaIncludes>
-					<generatePackage>com.xiang.demo.java.domain.xml.gzeport</generatePackage>
+					<generatePackage>com.xiang.demo.java.domain.xml.ceb.importxml</generatePackage>
 
 					<packageLevelAnnotations>false</packageLevelAnnotations>
 					<noFileHeader>true</noFileHeader>
